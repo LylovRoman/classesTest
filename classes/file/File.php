@@ -1,5 +1,8 @@
 <?php
-include_once('Interfaces/iFile.php');
+namespace Classes\File;
+
+use Interfaces\iFile;
+
 class File implements iFile
 {
     private $filePath;

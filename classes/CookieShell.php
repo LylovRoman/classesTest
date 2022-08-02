@@ -1,4 +1,6 @@
 <?php
+namespace Classes;
+
 class CookieShell
 {
     public function set($name, $value, $time)

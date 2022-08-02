@@ -1,4 +1,6 @@
 <?php
+    namespace Interfaces;
+
     interface iFile
     {
         public function __construct($filePath);

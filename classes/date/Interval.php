@@ -1,4 +1,6 @@
 <?php
+namespace Classes\Date;
+
 class Interval
 {
     private $date1;

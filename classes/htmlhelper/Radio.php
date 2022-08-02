@@ -1,22 +1,27 @@
 <?php
+
+namespace Classes\Htmlhelper;
+
 include_once('Input.php');
-class Checkbox extends Input
+
+class Radio extends Input
 {
     public function __construct()
     {
-        $this->setAttribute('type', 'checkbox');
-        $this->setAttribute('value', '1');
+        $this->setAttribute('type', 'radio');
         parent::__construct();
     }
+
     public function open()
     {
         $name = $this->getAttribute('name');
-        if ($name){
-            if(isset($_REQUEST[$name])){
+        if ($name) {
+            if ($_REQUEST[$name] == $this->getAttribute('value')) {
                 $this->setAttribute('checked', true);
             }
         }
-        return parent::open();
+        return Tag::open();
     }
 }
+
 ?>

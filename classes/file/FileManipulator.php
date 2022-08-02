@@ -1,4 +1,6 @@
 <?php
+namespace Classes\File;
+
 class FileManipulator
 {
     public function create($filePath)

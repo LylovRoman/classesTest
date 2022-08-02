@@ -1,5 +1,9 @@
 <?php
+
+namespace Classes\Htmlhelper;
+
 include_once('Input.php');
+
 class Submit extends Input
 {
     public function __construct()
@@ -8,4 +12,5 @@ class Submit extends Input
         return parent::__construct();
     }
 }
+
 ?>

@@ -1,5 +1,9 @@
 <?php
+
+namespace Classes\Htmlhelper;
+
 include_once('Input.php');
+
 class Password extends Input
 {
     public function __construct()
@@ -8,4 +12,5 @@ class Password extends Input
         parent::__construct();
     }
 }
+
 ?>

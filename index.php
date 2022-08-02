@@ -9,11 +9,10 @@
 </head>
 <body>
     <?php
-        include_once('Classes/SessionShell.php');
-        include_once('Classes/File.php');
-
-        $session = (new SessionShell())->set('session', $_SESSION['session'] += 1)->get('session');
-        echo $session;
+        spl_autoload_register();
+        use Classes\DatabaseShell;
+        $db = new DatabaseShell('localhost', 'root', '', 'classtest');
+        $db->selectAll('test', 'id > 5');
     ?>
 </body>
 </html>

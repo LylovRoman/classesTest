@@ -1,5 +1,9 @@
 <?php
+
+namespace Classes\Htmlhelper;
+
 include_once('Tag.php');
+
 class Form extends Tag
 {
     public function __construct()
@@ -7,4 +11,5 @@ class Form extends Tag
         parent::__construct('form');
     }
 }
+
 ?>

@@ -1,17 +1,26 @@
 <?php
+
+namespace Classes\Htmlhelper;
+
 include_once('Tag.php');
+
 class HtmlList extends Tag
 {
     public $items = [];
 
-    public function __toString(){
+    public function __toString()
+    {
         return $this->show();
     }
-    public function addItem($li){
+
+    public function addItem($li)
+    {
         $this->items[] = $li;
         return $this;
     }
-    public function show(){
+
+    public function show()
+    {
         $result = $this->open();
         foreach ($this->items as $item) {
             $result .= $item;
@@ -21,4 +30,5 @@ class HtmlList extends Tag
         return $result;
     }
 }
+
 ?>
